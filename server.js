@@ -1,18 +1,14 @@
-// Load the express module
-const express = require('express');
-
-// Create an Express application
-const app = express();
-
-// Define a port to listen to
-const PORT = 8080;
-
-// Define a GET route
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const app = (0, express_1.default)();
+const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
-    res.send('Hello World ---');
+    res.send('Hello World');
 });
-
-// Start the server on the specified port
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
