@@ -7,7 +7,7 @@ const PORT = process.env.PORT;
 
 app.get("/", (req: Request, res: Response) => {
   const string = helloWorld();
-  res.send("Hello World in typescript");
+  res.send("Hello World in typescript - using .env");
 });
 
 app.listen(PORT, () => {
